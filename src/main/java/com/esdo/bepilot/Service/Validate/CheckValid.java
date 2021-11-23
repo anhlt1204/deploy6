@@ -274,16 +274,16 @@ public class CheckValid {
             throw new InvalidException("New Password is required");
         }
 
-        if (request.getReNewPassword().trim().length() == 0) {
-            throw new InvalidException("Renew Password is required");
-        }
-
-        if (request.getNewPassword().trim().length() == 0) {
-            throw new InvalidException("New Password is required");
+        if (!isPassword(request.getReNewPassword().trim())) {
+            throw new InvalidException("Invalid New Password");
         }
 
         if (request.getReNewPassword().trim().length() == 0) {
             throw new InvalidException("Renew Password is required");
+        }
+
+        if (!isPassword(request.getReNewPassword().trim())) {
+            throw new InvalidException("Invalid Renew Password");
         }
 
         if (!request.getNewPassword().trim().equals(request.getReNewPassword().trim())) {
