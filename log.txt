@@ -1,0 +1,61 @@
+"2021-11-23 08:31:22 - Starting BePilotApplication using Java 11.0.13 on DESKTOP-88FAOV3 with PID 1656 (D:\New folder\be-pilot-project\be-pilot\target\classes started by EdsoLabs in D:\New folder\be-pilot-project\be-pilot)
+""2021-11-23 08:31:22 - No active profile set, falling back to default profiles: default
+""2021-11-23 08:31:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-11-23 08:31:23 - Finished Spring Data repository scanning in 76 ms. Found 10 JPA repository interfaces.
+""2021-11-23 08:31:23 - Tomcat initialized with port(s): 8080 (http)
+""2021-11-23 08:31:23 - Starting service [Tomcat]
+""2021-11-23 08:31:23 - Starting Servlet engine: [Apache Tomcat/9.0.54]
+""2021-11-23 08:31:24 - Initializing Spring embedded WebApplicationContext
+""2021-11-23 08:31:24 - Root WebApplicationContext: initialization completed in 1299 ms
+""2021-11-23 08:31:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-11-23 08:31:24 - HHH000412: Hibernate ORM core version 5.4.32.Final
+""2021-11-23 08:31:24 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-11-23 08:31:24 - HikariPool-1 - Starting...
+""2021-11-23 08:31:24 - HikariPool-1 - Start completed.
+""2021-11-23 08:31:24 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+""2021-11-23 08:31:25 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-11-23 08:31:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-11-23 08:31:26 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@650a0b50, org.springframework.security.web.context.SecurityContextPersistenceFilter@76d220eb, org.springframework.security.web.header.HeaderWriterFilter@36e11b60, org.springframework.web.filter.CorsFilter@55e3b64d, org.springframework.security.web.authentication.logout.LogoutFilter@52a23575, com.esdo.bepilot.Util.CustomJwtAuthenticationFilter@5a4d4f9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29dcad7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b6c55b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52f71d2, org.springframework.security.web.session.SessionManagementFilter@4ee80a94, org.springframework.security.web.access.ExceptionTranslationFilter@3c1ef806, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f83616]
+""2021-11-23 08:31:26 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2021-11-23 08:31:26 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-11-23 08:31:26 - Tomcat started on port(s): 8080 (http) with context path ''
+""2021-11-23 08:31:26 - Context refreshed
+""2021-11-23 08:31:26 - Found 1 custom documentation plugin(s)
+""2021-11-23 08:31:26 - Scanning for api listing references
+""2021-11-23 08:31:26 - Generating unique operation named: createUserUsingPOST_1
+""2021-11-23 08:31:26 - Generating unique operation named: createUserUsingPOST_2
+""2021-11-23 08:31:26 - Generating unique operation named: searchCustomerUsingGET_1
+""2021-11-23 08:31:26 - Generating unique operation named: createUserUsingPOST_3
+""2021-11-23 08:31:26 - Started BePilotApplication in 4.174 seconds (JVM running for 4.854)
+""2021-11-23 09:51:33 - Starting BePilotApplication using Java 11.0.13 on DESKTOP-88FAOV3 with PID 17060 (D:\Deploy6\be-pilot\target\classes started by EdsoLabs in D:\Deploy6\be-pilot)
+""2021-11-23 09:51:33 - No active profile set, falling back to default profiles: default
+""2021-11-23 09:51:34 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-11-23 09:51:34 - Finished Spring Data repository scanning in 76 ms. Found 10 JPA repository interfaces.
+""2021-11-23 09:51:34 - Tomcat initialized with port(s): 8080 (http)
+""2021-11-23 09:51:34 - Starting service [Tomcat]
+""2021-11-23 09:51:34 - Starting Servlet engine: [Apache Tomcat/9.0.54]
+""2021-11-23 09:51:35 - Initializing Spring embedded WebApplicationContext
+""2021-11-23 09:51:35 - Root WebApplicationContext: initialization completed in 1547 ms
+""2021-11-23 09:51:35 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-11-23 09:51:35 - HHH000412: Hibernate ORM core version 5.4.32.Final
+""2021-11-23 09:51:35 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-11-23 09:51:35 - HikariPool-1 - Starting...
+""2021-11-23 09:51:38 - HikariPool-1 - Start completed.
+""2021-11-23 09:51:38 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""2021-11-23 09:51:47 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-11-23 09:51:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-11-23 09:51:48 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25291901, org.springframework.security.web.context.SecurityContextPersistenceFilter@209f0986, org.springframework.security.web.header.HeaderWriterFilter@58ca1cad, org.springframework.web.filter.CorsFilter@a6d4547, org.springframework.security.web.authentication.logout.LogoutFilter@1737834, com.esdo.bepilot.Util.CustomJwtAuthenticationFilter@7a31ca20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c3a767, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c83e9ca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@701996e9, org.springframework.security.web.session.SessionManagementFilter@7a0eb939, org.springframework.security.web.access.ExceptionTranslationFilter@2314f013, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c69b396]
+""2021-11-23 09:51:48 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2021-11-23 09:51:49 - Tomcat started on port(s): 8080 (http) with context path ''
+""2021-11-23 09:51:49 - Context refreshed
+""2021-11-23 09:51:49 - Found 1 custom documentation plugin(s)
+""2021-11-23 09:51:49 - Scanning for api listing references
+""2021-11-23 09:51:49 - Generating unique operation named: createUserUsingPOST_1
+""2021-11-23 09:51:49 - Generating unique operation named: createUserUsingPOST_2
+""2021-11-23 09:51:49 - Generating unique operation named: searchCustomerUsingGET_1
+""2021-11-23 09:51:49 - Generating unique operation named: createUserUsingPOST_3
+""2021-11-23 09:51:49 - Started BePilotApplication in 16.172 seconds (JVM running for 17.804)
+""2021-11-23 09:52:00 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2021-11-23 09:52:00 - HikariPool-1 - Shutdown initiated...
+""2021-11-23 09:52:02 - HikariPool-1 - Shutdown completed.
+"
