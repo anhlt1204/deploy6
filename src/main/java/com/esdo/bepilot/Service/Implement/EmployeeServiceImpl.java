@@ -163,7 +163,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         Account account = optionalAccount.get();
         account.setId(employee.getAccount().getId());
         account.setEmail(request.getEmail());
-        account.setPassword(bcryptEncoder.encode(request.getPassword()));
+//        account.setPassword(bcryptEncoder.encode(request.getPassword()));
         account.setRole(request.getRole());
         account.setEmployee(null);
 
