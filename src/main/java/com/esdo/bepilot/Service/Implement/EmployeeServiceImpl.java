@@ -58,7 +58,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setAccount(account);
 
         // Save avatar and set avatar
-        UploadAvatar.upload(employeeRequest.getAvatar(), employee);
+//        UploadAvatar.upload(employeeRequest.getAvatar(), employee);
+        employee.setAvatar(employeeRequest.getAvatar());
 
         Employee employeeSave = employeeRepository.save(employee);
 
@@ -169,13 +170,14 @@ public class EmployeeServiceImpl implements EmployeeService {
         accountRepository.save(account);
 
         // Save avatar and set avatar
-        if (!request.getAvatar().equals(employee.getAvatar())) {
-            File file = new File(employee.getAvatar());
-            UploadAvatar.upload(request.getAvatar(), employee);
-            file.delete();
-        } else {
-            employee.setAvatar(request.getAvatar());
-        }
+//        if (!request.getAvatar().equals(employee.getAvatar())) {
+//            File file = new File(employee.getAvatar());
+//            UploadAvatar.upload(request.getAvatar(), employee);
+//            file.delete();
+//        } else {
+//            employee.setAvatar(request.getAvatar());
+//        }
+        employee.setAvatar(request.getAvatar());
 
         employee.setName(request.getName());
         employee.setPhone(request.getPhone());

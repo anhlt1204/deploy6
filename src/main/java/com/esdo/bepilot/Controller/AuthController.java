@@ -2,6 +2,7 @@ package com.esdo.bepilot.Controller;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import com.esdo.bepilot.Exception.InvalidException;
 import com.esdo.bepilot.Model.Request.*;
 import com.esdo.bepilot.Repository.AccountRepository;
 import com.esdo.bepilot.Service.AuthService;
@@ -111,22 +112,21 @@ public class AuthController {
 
     /**
      * Tải ảnh lên cloudianry
-     * @param files
      * @return
      * @throws IOException
      */
     @PostMapping(value = "/image")
     @Transactional(rollbackFor = Exception.class)
     @ApiOperation("Tải ảnh lên cloudianry")
-    public ResponseEntity<?> upload(@RequestParam("files") MultipartFile[] files) throws IOException {
-        log.info(this.getClass().getName() + ": start upload" + "\n\tParam\n\t\t" + files);
-        for (int i = 0; i < files.length; i++) {
-            Map<?, ?> cloudinaryMap = cloudinary.uploader().upload(files[i].getBytes(), ObjectUtils.emptyMap());
-            System.out.println(cloudinaryMap.get("secure_url").toString());
-            System.out.println(cloudinaryMap.get("public_id").toString());
+    public ResponseEntity<?> upload(@RequestParam("avatar") MultipartFile[] avatar) throws IOException {
+        log.info(this.getClass().getName() + ": start upload" + "\n\tParam\n\t\t" + avatar);
+        if (avatar.length == 0) {
+            throw new InvalidException("Avatar is required");
         }
-
-        return ResponseEntity.ok("Ok");
+        String link = "";
+        Map<?, ?> cloudinaryMap = cloudinary.uploader().upload(avatar[0].getBytes(), ObjectUtils.emptyMap());
+        link = cloudinaryMap.get("secure_url").toString();
+        return ResponseEntity.ok(link);
     }
 }
 
