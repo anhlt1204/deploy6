@@ -45,4 +45,9 @@ public class MissionDetail {
     @UpdateTimestamp
     @Column(columnDefinition = "timestamp default now()")
     private OffsetDateTime updateAt;
+
+    @PrePersist
+    void onCreate(){
+        this.setCreateAt(OffsetDateTime.now());
+    }
 }
