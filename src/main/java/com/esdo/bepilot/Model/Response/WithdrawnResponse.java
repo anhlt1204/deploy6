@@ -1,14 +1,12 @@
 package com.esdo.bepilot.Model.Response;
 
-import com.esdo.bepilot.Model.Entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.time.OffsetDateTime;
 
 @Getter
 @Setter
@@ -24,9 +22,9 @@ public class WithdrawnResponse {
 
     private BigDecimal moneyRemaining ;
 
-    private Timestamp createdAt ;
+    private OffsetDateTime createdAt ;
 
-    private Timestamp updatedAt ;
+    private OffsetDateTime updatedAt ;
 
     private String status ;
 }
