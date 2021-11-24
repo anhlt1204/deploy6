@@ -89,7 +89,7 @@ public class CustomerServiceImpl implements CustomerService {
         log.info("Inside searchCustomer of User Service ");
         Pageable paging = PageRequest.of(pageIndex, pageSize);
 //        Page<Customer> page = customerRepository.searchCustomer(paging,keyWord);
-        Page<Customer> page = customerRepository.findAll(CustomerSpecification.filterCustomer(keyWord.toUpperCase()),paging);
+        Page<Customer> page = customerRepository.findAll(CustomerSpecification.filterCustomer(keyWord),paging);
         List<Customer> customers = page.getContent();
         List<CustomerResponse> responses = customerMapper.mapToListCustomerEntity(customers) ;
         return responses ;

@@ -2,6 +2,7 @@ package com.esdo.bepilot.Service.Implement;
 
 import com.esdo.bepilot.Exception.InvalidException;
 import com.esdo.bepilot.Model.Entity.Config;
+import com.esdo.bepilot.Model.Entity.Employee;
 import com.esdo.bepilot.Model.Entity.SubConfig;
 import com.esdo.bepilot.Model.Request.ConfigRequest;
 import com.esdo.bepilot.Model.Response.ConfigResponse;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -33,6 +35,8 @@ public class ConfigServiceImpl implements ConfigService {
      */
     @Override
     public ConfigResponse getConfig() {
+        List<Config> sort = configRepository.findAllByOrderById();
+        configRepository.saveAll(sort);
         Optional<Config> configOptional = configRepository.findById(1L);
         if (configOptional.isEmpty()) {
             throw new InvalidException("Config is empty");

@@ -84,7 +84,7 @@ public class UserServiceImpl implements UserService {
         log.info("Inside searchCustomer of User Service ");
         Pageable paging = PageRequest.of(pageIndex, pageSize);
 //        Page<Customer> page = customerRepository.searchCustomer(paging,keyWord);
-        Page<User> page = userRepository.findAll(UserSpecification.filterUser(keyWord.toUpperCase()),paging);
+        Page<User> page = userRepository.findAll(UserSpecification.filterUser(keyWord),paging);
         List<User> users = page.getContent();
         List<UserResponse> responses = userMapper.mapToListUserEntity(users) ;
         return responses ;
