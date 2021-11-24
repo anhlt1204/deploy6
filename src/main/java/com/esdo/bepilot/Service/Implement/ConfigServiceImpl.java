@@ -35,8 +35,8 @@ public class ConfigServiceImpl implements ConfigService {
      */
     @Override
     public ConfigResponse getConfig() {
-        List<Config> sort = configRepository.findAllByOrderById();
-        configRepository.saveAll(sort);
+        List<SubConfig> sort = subConfigRepository.findAllByOrderById();
+        subConfigRepository.saveAll(sort);
         Optional<Config> configOptional = configRepository.findById(1L);
         if (configOptional.isEmpty()) {
             throw new InvalidException("Config is empty");
