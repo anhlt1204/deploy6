@@ -316,8 +316,8 @@ public class CheckValid {
             throw new InvalidException("Youtube - Chạy từ khóa - ND nhận được không hợp lệ");
         }
 
-        if (request.getYtKeyUserReceived() < request.getYtKeyCustomerPay()) {
-            throw new InvalidException("Youtube - Chạy từ khóa - ND nhận được không được nhỏ hơn Youtube - Chạy từ khóa - KH phải trả");
+        if (request.getYtKeyUserReceived() > request.getYtKeyCustomerPay()) {
+            throw new InvalidException("Youtube - Chạy từ khóa - ND nhận được không được lớn hơn Youtube - Chạy từ khóa - KH phải trả");
         }
 
         if (request.getGgKeyMinTime() <= 0) {
@@ -340,8 +340,8 @@ public class CheckValid {
             throw new InvalidException("Google - Chạy từ khóa - ND nhận được không hợp lệ");
         }
 
-        if (request.getGgKeyUserReceived() < request.getGgKeyCustomerPay()) {
-            throw new InvalidException("Google - Chạy từ khóa - ND nhận được không được nhỏ hơn Google - Chạy từ khóa - KH phải trả");
+        if (request.getGgKeyUserReceived() > request.getGgKeyCustomerPay()) {
+            throw new InvalidException("Google - Chạy từ khóa - ND nhận được không được lớn hơn Google - Chạy từ khóa - KH phải trả");
         }
 
         if (request.getGgBackLinkMinTime() <= 0) {
@@ -364,8 +364,8 @@ public class CheckValid {
             throw new InvalidException("Google - Chạy backlink - ND nhận được không hợp lệ");
         }
 
-        if (request.getGgBackLinkUserReceived() < request.getGgBackLinkCustomerPay()) {
-            throw new InvalidException("Google - Chạy backlink - ND nhận được không được nhỏ hơn Google - Chạy backlink - KH phải trả");
+        if (request.getGgBackLinkUserReceived() > request.getGgBackLinkCustomerPay()) {
+            throw new InvalidException("Google - Chạy backlink - ND nhận được không được lớn hơn Google - Chạy backlink - KH phải trả");
         }
 
         if (request.getGgMissionMinTime() <= 0) {
@@ -388,8 +388,8 @@ public class CheckValid {
             throw new InvalidException("Google - Nhiệm vụ phức tạp - ND nhận được không hợp lệ");
         }
 
-        if (request.getGgMissionUserReceived() < request.getGgMissionCustomerPay()) {
-            throw new InvalidException("Google - Nhiệm vụ phức tạp - ND nhận được không được nhỏ hơn Google - Nhiệm vụ phức tạp - KH phải trả");
+        if (request.getGgMissionUserReceived() > request.getGgMissionCustomerPay()) {
+            throw new InvalidException("Google - Nhiệm vụ phức tạp - ND nhận được không được lớn hơn Google - Nhiệm vụ phức tạp - KH phải trả");
         }
 
         if (request.getMaxMission() <= 0) {
